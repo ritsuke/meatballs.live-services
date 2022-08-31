@@ -1,0 +1,24 @@
+{
+  "name": "meatballs.live-ingest-services",
+  "version": "0.0.1",
+  "repository": "git@github.com:ritsuke/meatballs.live-ingest-services.git",
+  "author": "ritsuke <ritsuke@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "exports": "./build/index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development concurrently \"npx tsc --watch\" \"nodemon --experimental-modules --es-module-specifier-resolution=node -q ./build/index.js\"",
+    "build": "npx tsc",
+    "start": "yarn build && cross-env NODE_ENV=production node --experimental-specifier-resolution=node ./build/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.3",
+    "concurrently": "^7.3.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.1",
+    "node-fetch": "^3.2.10",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
