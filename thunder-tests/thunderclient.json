@@ -1,0 +1,114 @@
+[
+  {
+    "_id": "b42b20c1-c4e9-4fd1-9d43-78f79e55378a",
+    "colId": "b7d5dd4e-f981-486e-a3f5-8e8a6236b34d",
+    "containerId": "",
+    "name": "Ingest | New Stories | Hacker News",
+    "url": "localhost:3010/v1/ingest/new-stories?dataSource=hn&limit=10",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-08-31T19:21:13.052Z",
+    "modified": "2022-09-01T18:16:04.452Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{INGEST_API_KEY}}"
+      }
+    ],
+    "params": [
+      {
+        "name": "dataSource",
+        "value": "hn",
+        "isPath": false
+      },
+      {
+        "name": "limit",
+        "value": "10",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "8793c4bb-1f9f-472f-87f5-c37eff2e95a2",
+    "colId": "b7d5dd4e-f981-486e-a3f5-8e8a6236b34d",
+    "containerId": "",
+    "name": "Ingest | Story Activity | Hacker News",
+    "url": "localhost:3010/v1/ingest/story-activity?dataSource=hn&start=0&end=10&commentWeight=4&falloff=20",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-08-31T20:25:34.847Z",
+    "modified": "2022-09-01T18:17:19.134Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{INGEST_API_KEY}}"
+      }
+    ],
+    "params": [
+      {
+        "name": "dataSource",
+        "value": "hn",
+        "isPath": false
+      },
+      {
+        "name": "start",
+        "value": "0",
+        "isPath": false
+      },
+      {
+        "name": "end",
+        "value": "10",
+        "isPath": false
+      },
+      {
+        "name": "score",
+        "value": "",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "commentTotal",
+        "value": "",
+        "isDisabled": true,
+        "isPath": false
+      },
+      {
+        "name": "commentWeight",
+        "value": "4",
+        "isPath": false
+      },
+      {
+        "name": "falloff",
+        "value": "20",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "04fc4a8a-5750-4b14-8e4c-8feaac645947",
+    "colId": "b7d5dd4e-f981-486e-a3f5-8e8a6236b34d",
+    "containerId": "",
+    "name": "Generate | Collections",
+    "url": "localhost:3010/v1/generate/new-collections?dateKey=2022:9:1",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-09-01T17:49:59.291Z",
+    "modified": "2022-09-01T18:53:07.296Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{INGEST_API_KEY}}"
+      }
+    ],
+    "params": [
+      {
+        "name": "dateKey",
+        "value": "2022:9:1",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  }
+]
