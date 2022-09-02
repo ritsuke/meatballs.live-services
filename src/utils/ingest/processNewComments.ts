@@ -8,7 +8,7 @@ import {
   MEATBALLS_CHANNEL_KEY
 } from '../../types/constants'
 
-import { isAxiosError } from '../../utils/api'
+import { isAxiosError } from '../routes'
 
 import { redisClient } from '../../redis/clients'
 import { commentRepository } from '../../redis/om/comment'

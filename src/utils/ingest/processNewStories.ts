@@ -6,7 +6,7 @@ import { DATA_SOURCE, MEATBALLS_DB_KEY } from '../../types/constants'
 import { redisClient } from '../../redis/clients'
 import { storyRepository } from '../../redis/om/story'
 
-import { isAxiosError } from '../../utils/api'
+import { isAxiosError } from '../routes'
 
 import { getStoryKeysToSave, SOURCE_REQUEST_HEADERS } from '..'
 import {

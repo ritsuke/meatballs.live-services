@@ -12,7 +12,7 @@ import {
 
 import { redisClient } from '../../redis/clients'
 
-import { isAxiosError } from '../../utils/api'
+import { isAxiosError } from '../routes'
 
 import { SOURCE_REQUEST_HEADERS } from '..'
 import {

@@ -8,7 +8,7 @@ import { DATA_SOURCE, MEATBALLS_DB_KEY } from '../../types/constants'
 import { redisClient } from '../../redis/clients'
 import { userRepository } from '../../redis/om/user'
 
-import { isAxiosError } from '../../utils/api'
+import { isAxiosError } from '../routes'
 
 import { SOURCE_REQUEST_HEADERS } from '..'
 import type { HackerNewsNativeUserData } from '.'

@@ -17,7 +17,7 @@ import {
 } from '../../types/constants'
 
 import { removeSpecialCharacters } from '../../utils'
-import { isAxiosError } from '../../utils/api'
+import { isAxiosError } from '../routes'
 import { ALLOWED_TAGS } from '../../utils/'
 import { getCollectionsByDate, getUTCTimeFromYMDKey } from '.'
 import { UnsplashPhotoData, UNSPLASH_API_ENDPOINTS } from '.'
@@ -95,7 +95,9 @@ const processNewCollections = async ({
     const foundTimeSeries = await redisClient.ts.mRange(
       startOfRequestedDayInMilliseconds,
       endOfRequestedDayInMilliseconds,
-      ['type=weighted', 'compacted=day'],
+      // TODO: this throws ERR TSDB: missing labels for filter argument...
+      // ['type=weighted', 'compacted=day'],
+      'compacted=day',
       {
         GROUPBY: { label: 'story', reducer: TimeSeriesReducers.MAXIMUM }
       }
